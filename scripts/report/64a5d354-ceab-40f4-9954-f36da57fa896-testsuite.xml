@@ -1,0 +1,47 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1677750529382" stop="1677750549674">
+  <name>test_home</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1677750529382" status="failed" stop="1677750549674">
+      <name>TestHome.test_home</name>
+      <failure>
+        <message>TypeError: find_element() takes from 1 to 3 positional arguments but 28 were given</message>
+        <stack-trace>self = &lt;test_home.TestHome object at 0x0D57C550&gt;
+
+    def test_home(self):
+        time.sleep(3)
+&gt;       self.home.page_home_portfolio_business()
+
+test_home.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\page\page_home.py:20: in page_home_portfolio_business
+    self.page_existing_account_to_login()
+..\page\page_home.py:15: in page_existing_account_to_login
+    self.base_click(existing_account_to_login)
+..\base\base.py:13: in base_click
+    self.base_find(loc).click()
+..\base\base.py:10: in base_find
+    return WebDriverWait(self.driver, timeout=timeout, poll_frequency=poll).until(lambda a: a.find_element(*loc))
+D:\python3.6.7\lib\site-packages\selenium\webdriver\support\wait.py:71: in until
+    value = method(self._driver)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = &lt;appium.webdriver.webdriver.WebDriver (session="3b22cedf-80de-4e86-8819-b2ff8a64eae9")&gt;
+
+&gt;   return WebDriverWait(self.driver, timeout=timeout, poll_frequency=poll).until(lambda a: a.find_element(*loc))
+E   TypeError: find_element() takes from 1 to 3 positional arguments but 28 were given
+
+..\base\base.py:10: TypeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="20876-MainThread"/>
+        <label name="host" value="冒险一试"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
